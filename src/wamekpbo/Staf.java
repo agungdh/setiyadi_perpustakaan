@@ -11,7 +11,7 @@ package wamekpbo;
  */
 public class Staf extends Pegawai {
     @Override
-    void getDetail() {
+    public void getDetail() {
         System.out.println("Detil");
     }
 }

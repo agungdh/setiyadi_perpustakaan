@@ -10,48 +10,55 @@ package wamekpbo;
  * @author user
  */
 abstract class Pegawai {
-  String nama;
-  char golongan;
-  int jamKerja;
-  Gaji salary;
+  private String nama;
+  private char golongan;
+  private int jamKerja;
+  private Gaji salary;
   
-  String getNama() {
+  public String getNama() {
       return this.nama;
   }
   
-  void setNama(String nama) {
+  public void setNama(String nama) {
       this.nama = nama;
   }
   
-  char getGolongan() {
+  public char getGolongan() {
       return this.golongan;
   }
 
-  void setGolongan(char golongan) {
+  public void setGolongan(char golongan) {
       this.golongan = golongan;
-      
+            
       switch(this.golongan) {
         case 'A':
-            this.salary.gajiPokok = 3000000;
+            this.salary.setGajiPokok(3000000);
           break;
         case 'B':
-            this.salary.gajiPokok = 2000000;
+            this.salary.setGajiPokok(2000000);
           break;
         case 'C':
-            this.salary.gajiPokok = 1000000;
+            this.salary.setGajiPokok(1000000);
           break;
         default:
-          // code block
+            this.salary.setGajiPokok(0);
       }
   }
   
-  void setJamKerja(int jamKerja) {
+  public void setJamKerja(int jamKerja) {
       this.jamKerja = jamKerja;
+      
+      if (this.jamKerja > 8) {
+          int uangLemburPerJam = 30000;
+          int jamLembur = this.jamKerja - 8;
+                    
+          this.salary.setUangLembur(uangLemburPerJam * jamLembur);
+      }
   }
   
-  double getSalary() {
+  public double getSalary() {
       return this.salary.getGajiBersih();
   }
   
-  void getDetail() {}
+  public void getDetail() {}
 }

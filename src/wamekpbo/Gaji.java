@@ -10,18 +10,18 @@ package wamekpbo;
  * @author user
  */
 public class Gaji {
-    double gajiPokok;
-    double uangLembur;
+    private double gajiPokok;
+    private double uangLembur;
     
-    void setGajiPokok(double gajiPokok) {
+    public void setGajiPokok(double gajiPokok) {
         this.gajiPokok = gajiPokok;
     }
     
-   void setUangLembur(double uangLembur) {
+    public void setUangLembur(double uangLembur) {
        this.uangLembur = uangLembur;
-   }
+    }
    
-   double getGajiBersih() {
+    public double getGajiBersih() {
        return this.gajiPokok + this.uangLembur;
-   }
+    }
 }

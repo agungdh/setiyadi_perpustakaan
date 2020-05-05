@@ -10,22 +10,22 @@ package wamekpbo;
  * @author user
  */
 public class Perusahaan {
-    String namaPerusahaan;
-    String alamat;
+    private String namaPerusahaan;
+    private String alamat;
     
-    String getNamaPerusahaan() {
+    public String getNamaPerusahaan() {
         return this.namaPerusahaan;
     }
     
-    void setNamaPerusahaan(String namaPerusahaan) {
+    public void setNamaPerusahaan(String namaPerusahaan) {
         this.namaPerusahaan = namaPerusahaan;
     }
     
-    String getAlamat() {
+    public String getAlamat() {
         return this.alamat;
     }
     
-    void setAlamat(String alamat) {
+    public void setAlamat(String alamat) {
         this.alamat = alamat;
     }
 }
