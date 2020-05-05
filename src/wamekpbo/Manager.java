@@ -30,6 +30,14 @@ public class Manager extends Pegawai {
     
     @Override
     public void getDetail() {
-        System.out.println("Detil");
+        System.out.println("Nama: " + this.getNama());
+        System.out.println("Golongan: " + this.getGolongan());
+        System.out.println("Departemen: " + this.getDepartemen());
+        System.out.println("Gaji Bersih: " + this.getSalary());
+        System.out.println("===== LIST STAF =====");
+        for (Staf stafList : this.staf) {
+            System.out.println(stafList.getNama());
+        }
+        System.out.println("===== END LIST STAF =====");
     }
 }

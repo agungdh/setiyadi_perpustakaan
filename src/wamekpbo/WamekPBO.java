@@ -40,7 +40,28 @@ public class WamekPBO {
         stafFajar.setGolongan('C');
         stafFajar.setJamKerja(4);
         
-        System.out.println("Perusahaan: " + perusahaanBPKAD);
+        managerAgung.addStaff(stafNabil);
+        managerAgung.addStaff(stafNanda);
+        managerAgung.addStaff(stafFajar);
+        
+        System.out.println("Perusahaan: " + perusahaanBPKAD.getNamaPerusahaan());
+        System.out.println("Alamat: " + perusahaanBPKAD.getAlamat());
+        
+        System.out.println();
+        
+        managerAgung.getDetail();
+        
+        System.out.println();
+        
+        stafNabil.getDetail();
+        
+        System.out.println();
+        
+        stafNanda.getDetail();
+        
+        System.out.println();
+        
+        stafFajar.getDetail();
     }
     
 }

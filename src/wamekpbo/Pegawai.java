@@ -14,6 +14,10 @@ abstract class Pegawai {
   private char golongan;
   private int jamKerja;
   private Gaji salary;
+
+    Pegawai() {
+        this.salary = new Gaji();
+    }
   
   public String getNama() {
       return this.nama;

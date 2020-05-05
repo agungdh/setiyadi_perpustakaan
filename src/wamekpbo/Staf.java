@@ -12,6 +12,8 @@ package wamekpbo;
 public class Staf extends Pegawai {
     @Override
     public void getDetail() {
-        System.out.println("Detil");
+        System.out.println("Nama: " + this.getNama());
+        System.out.println("Golongan: " + this.getGolongan());
+        System.out.println("Gaji Bersih: " + this.getSalary());
     }
 }
