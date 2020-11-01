@@ -29,6 +29,8 @@ public class Main {
         for (Buku buku : bukuDipinjam) {
             System.out.println(buku.getID() + ", " + buku.getJudul());
         }
+        
+        this.showMenu();
     }
     
     void menuMahasiswa()
@@ -65,10 +67,9 @@ public class Main {
             buku.setJudul(this.scanner.nextLine());
 
             this.bukuDipinjam.add(buku);
-        } else
-        {
-            exit(1);
         }
+        
+        this.showMenu();
     }
 
     void menuHapusBuku()
@@ -85,13 +86,14 @@ public class Main {
             }
         }
         
-        if (bukuExist == false)
-        {
-            exit(1);
-        } else
+        if (bukuExist == true)
         {
             this.bukuDipinjam.remove(indexBuku);
+        } else {
+            System.out.println("Buku dengan ID " + ID + " Tidak Ada !!!");
         }
+        
+        this.showMenu();
     }
 
     void menuCetakBuktiPeminjaman()
@@ -107,6 +109,8 @@ public class Main {
         
         this.menuLihatBukuDipinjam();
         this.separator();
+        
+        this.showMenu();
     }
     
     void header()

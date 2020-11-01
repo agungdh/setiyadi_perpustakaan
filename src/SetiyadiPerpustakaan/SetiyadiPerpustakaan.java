@@ -19,6 +19,7 @@ public class SetiyadiPerpustakaan {
         Main main = new Main();
         
         main.utama();
+        main.menuMahasiswa();
         main.showMenu();
     }
 }
