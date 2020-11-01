@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wamekpbo;
+package SetiyadiPerpustakaan;
 
 import static java.lang.System.exit;
 import java.util.ArrayList;
@@ -94,19 +94,62 @@ public class Main {
         }
     }
 
+    void menuCetakBuktiPeminjaman()
+    {
+        System.out.println("Bukti Peminjaman Buku");
+        System.out.println("STMIK Dharma Wacana");
+        this.separator();
+        
+        System.out.println("NPM\t: " + this.mahasiswa.getNPM());
+        System.out.println("Nama\t: " + this.mahasiswa.getNama());
+        System.out.println("Jurusan\t: " + this.mahasiswa.getJurusan());
+        this.separator();
+        
+        this.menuLihatBukuDipinjam();
+        this.separator();
+    }
     
     void header()
     {
         System.out.println("Perpustakaan");
         System.out.println("STMIK Dharma Wacana");
-        System.out.println("====================");
+        this.separator();
     }
     
     void showMenu()
     {
+        String menu;
+        
         System.out.println("1. Pilih Buku");
         System.out.println("2. Hapus Buku");
         System.out.println("3. Lihat Buku Yang Dipinjam");
         System.out.println("4. Cetak Bukti Peminjaman");        
+        System.out.print("Pilih Menu : ");        
+        
+        menu = this.scanner.nextLine();
+        
+        switch (menu)
+        {
+            case "1": 
+                this.menuPilihBuku();
+                break;
+            case "2": 
+                this.menuHapusBuku();
+                break;
+            case "3": 
+                this.menuLihatBukuDipinjam();
+                break;
+            case "4": 
+                this.menuCetakBuktiPeminjaman();
+                break;
+            default:
+                this.showMenu();
+                break;
+        }
+    }
+    
+    void separator()
+    {
+        System.out.println("========================");   
     }
 }

@@ -3,17 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wamekpbo;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+package SetiyadiPerpustakaan;
 
 /**
  *
  * @author user
  */
-public class WamekPBO {
+public class SetiyadiPerpustakaan {
     
 
     /**
@@ -23,13 +19,6 @@ public class WamekPBO {
         Main main = new Main();
         
         main.utama();
-        main.menuMahasiswa();
-        main.menuPilihBuku();
-        main.menuPilihBuku();
-        main.menuPilihBuku();
-        main.menuPilihBuku();
-        main.menuHapusBuku();
-        main.menuHapusBuku();
-        main.menuLihatBukuDipinjam();
+        main.showMenu();
     }
 }
